@@ -21,7 +21,6 @@
     "react-alice-carousel": "^2.9.1",
     "react-bootstrap": "^2.10.4",
     "react-chartjs-2": "^5.2.0",
-    "react-charts": "^2.0.0-beta.7",
     "react-dom": "^18.3.1",
     "react-super-responsive-table": "^5.2.3"
   },
