@@ -58,11 +58,25 @@ body {
   opacity: 0.6;
 }
 
+.chart-scrollable {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.chart-container {
+  min-width: 600px;
+  height: 80vh;
+}
+
 @media only screen and (max-width: 768px) {
   #header-title {
     font-size: 50px;
   }
   #header-tagline {
     font-size: 16px;
+  }
+
+  .chart-container {
+    height: 60vh;
   }
 }
