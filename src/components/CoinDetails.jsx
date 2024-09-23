@@ -222,11 +222,14 @@ const CoinDetails = ({ show, hide, coinId, currency, coinImage }) => {
                         CoinCap.io
                       </a>
                     </li>
-                    {/* Add other links if available */}
                   </ul>
                 </Col>
                 <Col md={9} sm={12}>
-                  <Line data={data} options={options} />
+                  <div className="chart-scrollable">
+                    <div className="chart-container">
+                      <Line data={data} options={options} />
+                    </div>
+                  </div>
                 </Col>
               </Row>
             </Modal.Body>
