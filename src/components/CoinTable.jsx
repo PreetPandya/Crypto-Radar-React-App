@@ -129,7 +129,7 @@ const CoinTable = ({ selectCurr }) => {
               </p>
             </Col>
             <Col
-              xs={2}
+              xs={3}
               md={3}
               className="d-flex align-items-center justify-content-center"
             >
@@ -143,13 +143,13 @@ const CoinTable = ({ selectCurr }) => {
               </p>
             </Col>
             <Col
-              xs={4}
+              xs={3}
               md={3}
               className="d-flex align-items-center justify-content-center"
             >
               <p>
                 {currency === "inr" ? "₹" : "$"}
-                {coin.market_cap.toLocaleString().slice(0, -6)}M
+                {coin.market_cap.toLocaleString().slice(0, -9)}M
               </p>
             </Col>
           </Row>
