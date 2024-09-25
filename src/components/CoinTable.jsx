@@ -59,7 +59,7 @@ const CoinTable = ({ selectCurr }) => {
         </Col>
       </Row>
       <Row
-        className="text-center py-2"
+        className="text-center py-1"
         id="header-row"
         style={{
           background: "#EEBC1D",
