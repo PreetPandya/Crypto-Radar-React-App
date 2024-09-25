@@ -20,7 +20,7 @@ body {
   display: none;
 }
 
-#header-title {
+.header-title {
   font-size: 80px;
 }
 
@@ -28,6 +28,11 @@ body {
   font-size: 20px;
   opacity: 0.6;
   letter-spacing: 1.5px;
+}
+
+.header-img {
+  height: 100px;
+  width: auto;
 }
 
 .coin-carousel {
@@ -68,8 +73,20 @@ body {
   height: 80vh;
 }
 
+#coin-img {
+  height: 60px;
+}
+
+#coin-row {
+  font-size: 18px;
+}
+
+#header-row {
+  font-size: 20px;
+}
+
 @media only screen and (max-width: 768px) {
-  #header-title {
+  .header-title {
     font-size: 50px;
   }
   #header-tagline {
@@ -78,5 +95,16 @@ body {
 
   .chart-container {
     height: 60vh;
+  }
+  #coin-img {
+    height: 30px;
+  }
+
+  #coin-row {
+    font-size: 12px;
+  }
+
+  #header-row {
+    font-size: 14px;
   }
 }
