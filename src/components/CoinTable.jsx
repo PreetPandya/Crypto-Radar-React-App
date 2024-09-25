@@ -129,7 +129,7 @@ const CoinTable = ({ selectCurr }) => {
               </p>
             </Col>
             <Col
-              xs={3}
+              xs={2}
               md={3}
               className="d-flex align-items-center justify-content-center"
             >
@@ -143,7 +143,7 @@ const CoinTable = ({ selectCurr }) => {
               </p>
             </Col>
             <Col
-              xs={3}
+              xs={4}
               md={3}
               className="d-flex align-items-center justify-content-center"
             >
