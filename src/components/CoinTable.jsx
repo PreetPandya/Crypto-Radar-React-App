@@ -60,31 +60,31 @@ const CoinTable = ({ selectCurr }) => {
       </Row>
       <Row
         className="text-center py-3"
+        id="header-row"
         style={{
-          fontSize: 20,
           background: "#EEBC1D",
           color: "#000",
         }}
       >
-        <Col style={{ marginTop: "1rem" }} xs={6} md={3}>
+        <Col style={{ marginTop: "1rem" }} xs={3} md={3}>
           <p>Coin</p>
         </Col>
-        <Col style={{ marginTop: "1rem" }} xs={6} md={3}>
+        <Col style={{ marginTop: "1rem" }} xs={3} md={3}>
           <p>Price</p>
         </Col>
-        <Col style={{ marginTop: "1rem" }} xs={6} md={3}>
+        <Col style={{ marginTop: "1rem" }} xs={3} md={3}>
           <p>24h Change</p>
         </Col>
-        <Col style={{ marginTop: "1rem" }} xs={6} md={3}>
+        <Col style={{ marginTop: "1rem" }} xs={3} md={3}>
           <p>Market Cap</p>
         </Col>
       </Row>
 
       {currentData.map((coin) => (
         <React.Fragment key={coin.id}>
-          <Row className="text-center my-2" style={{ fontSize: 18 }}>
+          <Row className="text-center my-2" id="coin-row">
             <Col
-              xs={6}
+              xs={3}
               md={3}
               className="d-flex align-items-center justify-content-left"
               style={{ cursor: "pointer" }}
@@ -92,7 +92,7 @@ const CoinTable = ({ selectCurr }) => {
             >
               <img
                 className="m-3"
-                height={60}
+                id="coin-img"
                 src={coin.image}
                 alt={coin.name}
               />
@@ -102,7 +102,7 @@ const CoinTable = ({ selectCurr }) => {
               </div>
             </Col>
             <Col
-              xs={6}
+              xs={3}
               md={3}
               className="d-flex align-items-center justify-content-center"
             >
@@ -112,7 +112,7 @@ const CoinTable = ({ selectCurr }) => {
               </p>
             </Col>
             <Col
-              xs={6}
+              xs={2}
               md={3}
               className="d-flex align-items-center justify-content-center"
             >
@@ -127,7 +127,7 @@ const CoinTable = ({ selectCurr }) => {
               )}
             </Col>
             <Col
-              xs={6}
+              xs={4}
               md={3}
               className="d-flex align-items-center justify-content-center"
             >
