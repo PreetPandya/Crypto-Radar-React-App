@@ -20,7 +20,7 @@ const CoinTable = ({ selectCurr }) => {
       .then((response) => setData(response.data))
       .catch((error) => console.log(error));
     selectCurr(currency);
-  }, [currency]);
+  }, [currency, selectCurr]);
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -59,24 +59,41 @@ const CoinTable = ({ selectCurr }) => {
         </Col>
       </Row>
       <Row
-        className="text-center py-1"
+        className="text-center py-3"
         id="header-row"
         style={{
-          background: "#EEBC1D",
+          backgroundColor: "#EEBC1D",
           color: "#000",
+          fontWeight: "bold",
         }}
       >
-        <Col style={{ marginTop: "1rem" }} xs={3} md={3}>
-          <p>Coin</p>
+        <Col
+          xs={3}
+          md={3}
+          className="d-flex justify-content-center align-items-center"
+        >
+          Coin
         </Col>
-        <Col style={{ marginTop: "1rem" }} xs={3} md={3}>
-          <p>Price</p>
+        <Col
+          xs={3}
+          md={3}
+          className="d-flex justify-content-center align-items-center"
+        >
+          Price
         </Col>
-        <Col style={{ marginTop: "1rem" }} xs={3} md={3}>
-          <p>24h Change</p>
+        <Col
+          xs={3}
+          md={3}
+          className="d-flex justify-content-center align-items-center"
+        >
+          24h Change
         </Col>
-        <Col style={{ marginTop: "1rem" }} xs={3} md={3}>
-          <p>Market Cap</p>
+        <Col
+          xs={3}
+          md={3}
+          className="d-flex justify-content-center align-items-center"
+        >
+          Market Cap
         </Col>
       </Row>
 
@@ -112,32 +129,30 @@ const CoinTable = ({ selectCurr }) => {
               </p>
             </Col>
             <Col
-              xs={2}
+              xs={3}
               md={3}
               className="d-flex align-items-center justify-content-center"
             >
-              {coin.price_change_percentage_24h < 0 ? (
-                <p style={{ color: "red" }}>
-                  {coin.price_change_percentage_24h.toFixed(2)}%
-                </p>
-              ) : (
-                <p style={{ color: "#00ff00" }}>
-                  {coin.price_change_percentage_24h.toFixed(2)}%
-                </p>
-              )}
+              <p
+                style={{
+                  color:
+                    coin.price_change_percentage_24h < 0 ? "red" : "#00ff00",
+                }}
+              >
+                {coin.price_change_percentage_24h.toFixed(2)}%
+              </p>
             </Col>
             <Col
-              xs={4}
+              xs={3}
               md={3}
               className="d-flex align-items-center justify-content-center"
             >
               <p>
                 {currency === "inr" ? "₹" : "$"}
-                {coin.market_cap.toLocaleString().toString().slice(0, -6)}M
+                {coin.market_cap.toLocaleString().slice(0, -6)}M
               </p>
             </Col>
           </Row>
-
           <hr />
         </React.Fragment>
       ))}
